@@ -1,0 +1,103 @@
+.footerContainer{
+    color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 8%;
+    padding-bottom: 5%;
+}
+ .copyRightFooterContainer{
+    background-image: url("../../images/footer.jpg");
+    background-position: left;
+    background-size: cover;
+    background-color: #0c0c0cba;
+    background-blend-mode: multiply;
+    color: var(--white);
+    display: flex;
+    padding: var(--padding);
+    padding-top: 3%;
+    justify-content: space-evenly;
+    column-gap: 8%;
+    flex-direction: column;
+}
+.col{
+    width: 32%;
+}
+.col:first-child{
+    width: 65%;
+}
+
+.footerCompanyName{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.footerCompanyDescription{
+    font-size: 0.8rem;
+    font-weight: 200;
+    padding-top: 2%;
+    line-height: 2;
+}
+
+.contactInfo{
+    display: flex;
+    align-items: center;
+    column-gap: 3%;
+    padding-top: 4%;
+    /* line-height: 2; */
+}
+
+.contactInfoValue{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 0.85rem;
+}
+.contactIcon{
+    color: var(--red);
+}
+
+.redHeadFooter{
+    font-size: 1.2em;
+    color: var(--red);
+    font-weight: 300;
+}
+.footerLine{
+    height: 1px;
+    width: 40%;
+    margin: 8% 0%;
+    background-color: var(--gray);
+}
+.footerItem{
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 7% 0%;
+    cursor: pointer;
+}
+.footerItem .socialMediaMenu{
+    width: 50%;
+}
+
+.callBtnFooter{
+    background-color: var(--red);
+    padding: 3% 5%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    column-gap:5%;
+    cursor: pointer;
+}
+.callBtnFooter span{
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+.copyRight{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--gray);
+    padding: 3% 0%;
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
