@@ -19,7 +19,7 @@ export type SingleServiceType = {
 export const SingleProduct = ({ productName, bg, link }: SingleProductType) => {
     const navigate = useNavigate();
     return (
-        <div className="product" style={{ 'backgroundImage': `url(${bg})` }}>
+        <div  data-aos="zoom-out"  className="product" style={{ 'backgroundImage': `url(${bg})` }}>
             <div className="productName" >
                 {productName}
             </div>
@@ -31,7 +31,7 @@ export const SingleProduct = ({ productName, bg, link }: SingleProductType) => {
 export const SingleService = ({ image, service, icon, description }: SingleServiceType) => {
     return (
         <div className="service">
-            <div className="serviceImage" style={{ 'backgroundImage': `url(${image})` }}></div>
+            <div className="serviceImage"  data-aos="zoom-out" style={{ 'backgroundImage': `url(${image})` }}></div>
             <div className="serviceInfo">
                 <div className="serviceIcon">{icon}</div>
                 <div className="serviceName tu">{service}</div>
