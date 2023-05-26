@@ -1,11 +1,18 @@
 @media only screen and (max-width : 768px) {
     :root {
-        --padding: 0% 6% !important; 
+        --padding: 0% 6% !important;
         --padding1: 0% 7% !important;
-      }
+    }
+
     .navBarRight,
     .menuContainer {
         display: none !important;
+    }
+
+    .bannerGoals {
+        left: 10%;
+        right: 0;
+        width: auto;
     }
 
     .bannerOverlay {
@@ -38,8 +45,8 @@
     }
 
     .bannerGoals>.service {
-        width: 80%;
-        padding: 6% 6%;
+        width: 89%;
+        padding: 6% 4%;
     }
 
     .aboutUsTextContainer {
@@ -236,5 +243,25 @@
         right: 7%;
         font-size: 1.5rem;
         cursor: pointer;
+    }
+
+    .productContainerIndividual {
+        margin-top: 2%;
+    }
+
+    .productIconContainer {
+        margin: 3% 0%;
+    }
+
+    .productIcon {
+        padding: 2% 1% !important;
+        
+    }
+    .subProducts{
+        flex-direction: column;
+    }
+    .singleProductContainer{
+        width: 100% !important;
+        padding: 18% 5% !important;
     }
 }

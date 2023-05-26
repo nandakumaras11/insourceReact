@@ -1,9 +1,16 @@
 import { FaEnvelope, FaLocationArrow, FaPhone, FaPhoneAlt } from "react-icons/fa"
 import "./Footer.css"
-import { SocialMediaMenu } from "../NavBar/SingleComponents/SingleComponent"
-import { Link } from "react-router-dom"
+import { SocialMediaMenu, scrollWithOffset } from "../NavBar/SingleComponents/SingleComponent"
+import { Link, useLocation } from "react-router-dom"
+import { NavHashLink } from 'react-router-hash-link';
+import { useEffect } from "react";
 // import { Link } from "react-router-dom"
 export const Footer = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <section className="copyRightFooterContainer">
       <div className="footerContainer">
@@ -19,24 +26,27 @@ export const Footer = () => {
             <div className="contactIcon"><FaEnvelope /></div>
             <div className="contactInfoValue">{process.env.REACT_APP_EMAIL}</div>
           </div>
-          <div className="contactInfo">
+          <a href={`tel:${process.env.REACT_APP_MOBILE}`}>
+             <div className="contactInfo">
             <div className="contactIcon"><FaPhoneAlt /></div>
             <div className="contactInfoValue">{process.env.REACT_APP_MOBILE}</div>
           </div>
+          </a>
         </div>
         <div className="col">
           <div className="redHeadFooter">Quick Links</div>
           <div className="footerLine"></div>
-          <div className="footerItem">About Us</div>
-          <div className="footerItem">Products</div>
-          <div className="footerItem">Services</div>
-          <div className="footerItem">Contact Us</div>
+          <NavHashLink to="/#aboutUS" className="footerItem">About Us</NavHashLink>
+          <NavHashLink to="/#product" className="footerItem">Products</NavHashLink>
+          <NavHashLink to="/#service" className="footerItem">Services</NavHashLink>
+          <NavHashLink to="/#contact" className="footerItem">Contact Us</NavHashLink>
         </div>
         <div className="col">
           <div className="redHeadFooter">Working Hours</div>
           <div className="footerLine"></div>
           <div className="footerItem">9AM- 6PM. Monday-Sunday</div>
-            <Link  to="/Product" className="callBtnFooter"><FaPhoneAlt /> <span>{process.env.REACT_APP_MOBILE}</span></Link>
+
+          <a href={`tel:${process.env.REACT_APP_MOBILE}`}><div className="callBtnFooter"><FaPhoneAlt /> <span>{process.env.REACT_APP_MOBILE}</span></div></a>
           <div className="footerItem"><SocialMediaMenu /></div>
         </div>
         {/* <div className="footerLine"></div> */}

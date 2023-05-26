@@ -67,6 +67,7 @@
 }
 .footerItem{
     font-size: 0.85em;
+    display: block;
     font-weight: 300;
     margin: 7% 0%;
     cursor: pointer;

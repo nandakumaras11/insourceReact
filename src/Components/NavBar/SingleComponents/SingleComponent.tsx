@@ -1,4 +1,8 @@
+import { useEffect } from "react"
 import { FaFacebookSquare, FaInstagram, FaPlaneDeparture, FaWhatsapp } from "react-icons/fa"
+import { Link, useNavigate } from "react-router-dom"
+import { useLocation } from "react-router-dom"
+import logo from "../../../images/logow.png"
 
 export type SingleProductType = {
     productName: string
@@ -13,12 +17,13 @@ export type SingleServiceType = {
 }
 // import au from "../../../images/automobile.jpg"
 export const SingleProduct = ({ productName, bg, link }: SingleProductType) => {
+    const navigate = useNavigate();
     return (
         <div className="product" style={{ 'backgroundImage': `url(${bg})` }}>
             <div className="productName" >
                 {productName}
             </div>
-            <div className="viewMoreBtn">View More</div>
+            <div onClick={() => navigate('/Product', { state: { productName } })} className="viewMoreBtn">View More</div>
         </div>
     )
 }
@@ -40,15 +45,41 @@ export const SingleService = ({ image, service, icon, description }: SingleServi
 export const SocialMediaMenu = () => {
     return (
         <div className="socialMediaMenu">
+
             <div className="facebook">
-                <FaFacebookSquare />
+                <a href={process.env.REACT_APP_FB}><FaFacebookSquare />
+                </a>
             </div>
             <div className="instagram">
-                <FaInstagram />
+                <a href={process.env.REACT_APP_INSTAGRAM}>  <FaInstagram /></a>
             </div>
             <div className="whatsApp">
-                <FaWhatsapp />
+                <a href={process.env.REACT_APP_WHATSAPP}>  <FaWhatsapp /></a>
+
             </div>
+        </div>
+    )
+}
+
+export default function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+export const scrollWithOffset = (el: any) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};
+
+export const Loader = () => {
+    return (
+        <div className="loader">
+            <img width="170px" src={logo} />
         </div>
     )
 }

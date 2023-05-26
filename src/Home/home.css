@@ -62,6 +62,7 @@
     position: absolute;
     transition: all 0.2s ease-in-out;
     bottom: -0.2rem;
+    z-index: 11;
 }
 
 .menuText:hover .activeMenu {
@@ -146,8 +147,9 @@
     position: absolute;
     top: 92%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
 .bannerGoals>.service {
