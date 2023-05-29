@@ -36,9 +36,9 @@ export const NavBar = () => {
                             <GrMail />
                         </div>
                         <div className="text">
-                           <div className="textLine">Email</div>
-                           <a href={`mailto:${process.env.REACT_APP_EMAIL}`}>  <div className="textLine">{process.env.REACT_APP_EMAIL}</div>
-                           </a>
+                            <div className="textLine">Email</div>
+                            <a href={`mailto:${process.env.REACT_APP_EMAIL}`}>  <div className="textLine">{process.env.REACT_APP_EMAIL}</div>
+                            </a>
                         </div>
                     </div>
                     <div className="navBarRightItem">
@@ -63,8 +63,13 @@ interface SingleMenuItemTypes {
     toggleMenu?: any
 }
 export const SingleMenuItem = ({ icon, menuText, link, toggleMenu }: SingleMenuItemTypes) => {
+    const scrollWithOffset = (el: any) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -80;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+    };
     return (
-        <NavHashLink to={link} className="menuItem" onClick={toggleMenu && toggleMenu}>
+        <NavHashLink scroll={(el) => scrollWithOffset(el)} to={link} className="menuItem" onClick={toggleMenu && toggleMenu}>
             <div className="menuIcon">{icon}</div>
             <div className="menuText">{menuText}
                 <div className="activeMenu">

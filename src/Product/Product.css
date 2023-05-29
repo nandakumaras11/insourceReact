@@ -71,11 +71,13 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 28%;
-    padding: 5% 5%;
+    width: 30%;
+    padding: 7% 5%;
     border-radius: 10px;
     background-position: center;
-
+    flex-wrap: wrap;
     font-size: 1.2em;
+    background-color: gray;
+    background-blend-mode: multiply;
 
 }

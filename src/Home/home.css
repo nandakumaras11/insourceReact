@@ -370,7 +370,7 @@
     display: flex;
     flex-direction: column;
     color: var(--white);
-    background-color: rgba(30, 30, 30, 0.5);
+    background-color:rgb(30 30 30 / 67%);
     background-blend-mode: multiply;
     text-align: center;
     justify-content: center;
@@ -380,7 +380,8 @@
 .contactUsDetails {
     font-size: 0.9em;
     font-weight: 300;
-    width: 60%;
+    width: 75%;
+    line-height: 2;
 }
 
 .contactUsBtn {
@@ -540,7 +541,7 @@
 
 .contactUsValues {
     font-weight: 300;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 .contactUsLeft>div {
@@ -563,7 +564,7 @@
 }
 
 .scrollToTop {
-    position: absolute;
+    position: fixed;
     bottom: 3%;
     right: 3%;
     color: var(--red);

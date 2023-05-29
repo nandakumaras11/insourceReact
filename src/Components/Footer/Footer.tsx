@@ -4,6 +4,7 @@ import { SocialMediaMenu, scrollWithOffset } from "../NavBar/SingleComponents/Si
 import { Link, useLocation } from "react-router-dom"
 import { NavHashLink } from 'react-router-hash-link';
 import { useEffect } from "react";
+import logo from "../../images/logow.png"
 // import { Link } from "react-router-dom"
 export const Footer = () => {
   const { pathname } = useLocation();
@@ -15,7 +16,11 @@ export const Footer = () => {
     <section className="copyRightFooterContainer">
       <div className="footerContainer">
         <div className="col">
-          <div className="footerCompanyName"><b>Insource</b> Global</div>
+          <div className="footerCompanyName">  <Link to="/">
+                    <div className="logo">
+                        <img src={logo} style={{ objectFit: "cover" }} alt="logo" />
+                    </div>
+                </Link></div>
           <div className="footerCompanyDescription">Efficient logistics solutions for seamless transportation, warehousing, and distribution, ensuring reliable and timely delivery of goods worldwide.
           </div>
           <div className="contactInfo">

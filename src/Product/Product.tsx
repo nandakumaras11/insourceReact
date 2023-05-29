@@ -12,7 +12,7 @@ let ProductDB = [
         productName: "AUTOMOBILE SPARE PARTS",
         description: "Welcome to our premier platform for automobile spare parts import and export. We specialize in connecting suppliers and customers worldwide, providing top-quality automotive components for a seamless driving experience. With a wide range of spare parts available, we ensure quick and efficient sourcing, competitive pricing, and reliable delivery. Whether you're a distributor, retailer, or repair shop, we cater to your specific needs, offering a comprehensive selection of genuine parts for various vehicle makes and models. Trust us to be your trusted partner in the global automotive spare parts industry.",
         icon: <FaWrench className="productIcon" />,
-        products: ["Engine components", "Electrical parts", "Filters", "Fuel system parts", "Brake system components", "Cooling system parts", "Body and interior parts "]
+        products: ["Engine components", "Electrical parts", "Filters", "Fuel system parts", "Brake system components", "Cooling system parts", "Body and interior parts"]
     },
     {
         bg: bgauomobile,
@@ -57,8 +57,8 @@ let ProductDB = [
         products: [
             "Fresh and frozen seafood",
             "Seaweed and sea vegetables",
-            "   Fish oil and omega-3 supplements",
-            " Shellfish ",
+            "Fish oil and omega-3 supplements",
+            "Shellfish",
             "Caviar and roe",
             "Dried and smoked fish",
             "Squid and octopus",
@@ -111,7 +111,7 @@ const Product = () => {
                 <div className="subProducts">
 
                     {products.map((product, index) => {
-                        return <div style={{ backgroundImage: `url(${(bg)})` }} key={index} className="singleProductContainer">{product}</div>
+                        return <div data-aos="zoom-out" style={{ backgroundImage: `url("./${(product)}.jpg")` }} key={index} className="singleProductContainer">{product}</div>
                     })}
                 </div>
             </div>

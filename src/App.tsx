@@ -7,7 +7,7 @@ import Home from './Home/Home';
 import Footer from './Components/Footer/Footer';
 import "aos/dist/aos.css";
 import { Routes } from './Routes';
-import ScrollToTop, { Loader } from './Components/NavBar/SingleComponents/SingleComponent';
+import ScrollToTop, { Loader, ScrollToTopBtn } from './Components/NavBar/SingleComponents/SingleComponent';
 // import { useScrollToTop } from './Components/NavBar/SingleComponents/SingleComponent';
 import AOS from 'aos';
 function App() {
@@ -26,6 +26,7 @@ function App() {
         <NavBar />
         <Routes />
         <Footer />
+        <ScrollToTopBtn/>
       </Suspense>
     </>
   );

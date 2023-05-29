@@ -112,7 +112,7 @@ export default function Home() {
       </div>
       {/* menu end */}
       <div className="bannerOverlay">
-        <div className="welcome" data-aos="fade-right" data-aos-delay="200"><FaShippingFast /> Welcome to Insource Global</div>
+        <div className="welcome" data-aos="fade-right" data-aos-delay="200"><FaShippingFast /> Welcome to insourze Global</div>
         <div className="tagline " data-aos="fade-left">We make the
           <span>World Smaller </span> </div>
         <div className="companyDescription"  data-aos="slide-up"><q>Powering Global Trade. We connect businesses worldwide, offering streamlined import and export solutions. Trust us to simplify complexities and drive success in the international marketplace.</q>
@@ -167,13 +167,13 @@ export default function Home() {
       <div className="aboutUsTextContainer" data-aos="slide-up">
         <div className="aboutUsText"><FaPlaneDeparture color="#e10800" /> About &nbsp;<span> Us</span></div>
         <div className="aboutUsHead">Bridging Borders, Empowering Business</div>
-        <div className="aboutUsDescription">"Our import and export company specializes in facilitating seamless trade between India, Seychelles, and Maldives. With a strong focus on customer satisfaction, we provide comprehensive logistics solutions tailored to meet the unique requirements of each country. Our team of experts ensures efficient and secure transportation of goods, managing all aspects of the import/export process. From customs clearance to warehousing and distribution, we offer end-to-end services to streamline international trade. Leveraging our extensive network and industry knowledge, we strive to deliver exceptional value to our clients by ensuring timely delivery, competitive pricing, and hassle-free transactions."</div>
+        <div className="aboutUsDescription">We are a leading import and export company with operations spanning India, Seychelles, and Maldives. Established in February 2018 in Ajman, UAE, we provide comprehensive trade services connecting businesses in these countries. Our expertise lies in efficient logistics management, secure warehousing, and seamless transportation. With a commitment to customer satisfaction, we ensure timely and reliable delivery of goods across borders. Leveraging our extensive network and industry knowledge, we offer tailored solutions for diverse industries. Whether it's sourcing products from India or exporting goods to Seychelles and Maldives, our company is your trusted partner for successful international trade.</div>
 
         <div className="features">
           <div className="col1">
-            <div className="feature" data-aos="fade"><FaRegCheckCircle className="red" />Fast delivary</div>
+            <div className="feature" data-aos="fade"><FaRegCheckCircle className="red" />Fast delivery</div>
             <div className="feature"  data-aos="fade"><FaRegCheckCircle className="red" />Wholesale</div>
-            <div className="feature"  data-aos="fade"><FaRegCheckCircle className="red" />Reatail</div>
+            <div className="feature"  data-aos="fade"><FaRegCheckCircle className="red" />Retail</div>
             <div className="feature"  data-aos="fade"><FaRegCheckCircle className="red" />Affordable Pricing</div>
           </div>
           <div className="col1">
@@ -198,8 +198,8 @@ export default function Home() {
       </div>
     </section>
     <section className="contactUsBanner" >
-      <div className="sectionMainHead" data-aos="fade-up">Get in Touch</div>
-      <div className="contactUsDetails" data-aos="fade-up">Contact us today to explore global import and export opportunities in India, Seychelles, and Maldives. Our expert team is ready to assist you with comprehensive solutions for your business needs. Whether you require automobile spare parts, building materials, food stuff, or marine products, we have the expertise to streamline your supply chain and ensure seamless logistics management. We value open communication and are committed to providing personalized assistance. Reach out to us through our website to start a conversation and unlock the vast potential of international trade in these countries.</div>
+      <div className="sectionMainHead" data-aos="fade-up">Our Goals</div>
+      <div className="contactUsDetails" data-aos="fade-up">We strive to optimize supply chain operations, ensuring efficient transportation, streamlined processes, and timely delivery of goods. Our focus is on customer satisfaction, building strong partnerships, and exceeding expectations. We aim to establish a reliable and robust global network, expanding our reach to connect businesses with markets worldwide. Embracing sustainability, innovation, and continuous improvement, we seek to minimize environmental impact, leverage technology, and enhance operational efficiency. Our ultimate goal is to be a trusted logistics partner, enabling success for our clients and driving growth in the global marketplace.</div>
       <a href="#contact" className="contactUsBtn">  <div >Contact Us</div></a>
     </section>
 
@@ -212,7 +212,7 @@ export default function Home() {
           <div className="sectionMainHead">We provide the best logistics service for you.
           </div>
           <div className="subHead"  data-aos="fade-up" ><FaShippingFast className="subHeadIcon" />Logistics </div>
-          <div className="importExportServices">Welcome to our import and export services, where we connect businesses to a world of opportunities. With our expertise in global trade, we streamline the import and export process, ensuring a smooth and efficient experience for our clients. Whether you're looking to expand your product range through imports or reach new markets through exports, we have you covered. Our dedicated team handles all aspects, from sourcing high-quality products to managing customs procedures and logistics. With a strong network and deep industry knowledge, we navigate complexities, negotiate competitive rates, and ensure compliance with regulations. Trust us to be your reliable partner in international trade, delivering exceptional import and export services tailored to your specific needs.
+          <div className="importExportServices">Whether you're looking to expand your product range through imports or reach new markets through exports, we have you covered. Our dedicated team handles all aspects, from sourcing high-quality products to managing customs procedures and logistics. With a strong network and deep industry knowledge, we navigate complexities, negotiate competitive rates, and ensure compliance with regulations. Trust us to be your reliable partner in international trade, delivering exceptional import and export services tailored to your specific needs.
             <div className="features">
               <div className="col1">
                 <div className="feature"><FaRegCheckCircle className="red" />Efficient Supply Chain Management</div>
