@@ -208,11 +208,11 @@ export default function Home() {
         <FaHandshake color="#e10800" />Our&nbsp;<span>Services</span>
       </div>
       <div className="serviceDetails">
-        <div className="serviceTextSection"  data-aos="slide-up" >
+        <div className="serviceTextSection" >
           <div className="sectionMainHead">We provide the best logistics service for you.
           </div>
           <div className="subHead"  data-aos="fade-up" ><FaShippingFast className="subHeadIcon" />Logistics </div>
-          <div className="importExportServices">Whether you're looking to expand your product range through imports or reach new markets through exports, we have you covered. Our dedicated team handles all aspects, from sourcing high-quality products to managing customs procedures and logistics. With a strong network and deep industry knowledge, we navigate complexities, negotiate competitive rates, and ensure compliance with regulations. Trust us to be your reliable partner in international trade, delivering exceptional import and export services tailored to your specific needs.
+          <div className="importExportServices"  data-aos="slide-up" >Whether you're looking to expand your product range through imports or reach new markets through exports, we have you covered. Our dedicated team handles all aspects, from sourcing high-quality products to managing customs procedures and logistics. With a strong network and deep industry knowledge, we navigate complexities, negotiate competitive rates, and ensure compliance with regulations. Trust us to be your reliable partner in international trade, delivering exceptional import and export services tailored to your specific needs.
             <div className="features">
               <div className="col1">
                 <div className="feature"><FaRegCheckCircle className="red" />Efficient Supply Chain Management</div>
@@ -230,7 +230,7 @@ export default function Home() {
                 <div className="feature"><FaRegCheckCircle className="red" />Continuous Improvement</div>
               </div>
             </div>
-            <section className="procurementSection">
+            <section className="procurementSection"  data-aos="slide-up" >
               <div className="subHead"><FaStoreAlt className="subHeadIcon" />procurement </div>
               Our procurement services offer strategic sourcing, cost reduction, supplier management, and risk mitigation. We streamline your procurement process, secure favorable contracts, and provide transparent reporting. With expertise in market intelligence and continuous improvement, we deliver value and optimize your procurement operations.
               <div className="features">
