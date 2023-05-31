@@ -13,7 +13,7 @@ export const Footer = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <section className="copyRightFooterContainer">
+    <section className="copyRightFooterContainer"  data-aos="fade-up">
       <div className="footerContainer">
         <div className="col">
           <div className="footerCompanyName">  <Link to="/">
@@ -21,11 +21,13 @@ export const Footer = () => {
                         <img src={logo} style={{ objectFit: "cover" }} alt="logo" />
                     </div>
                 </Link></div>
-          <div className="footerCompanyDescription">Efficient logistics solutions for seamless transportation, warehousing, and distribution, ensuring reliable and timely delivery of goods worldwide.
+          <div className="footerCompanyDescription">Your trusted source for seamless trading and sourcing solutions. Unlock new business opportunities with our expertise.
           </div>
           <div className="contactInfo">
             <div className="contactIcon"><FaLocationArrow /></div>
-            <div className="contactInfoValue">{process.env.REACT_APP_ADDRESS}</div>
+            <div className="contactInfoValue linebreak">{`Insourze Global FZE
+            PO Box: 31795
+            Ajman UAE`}</div>
           </div>
           <div className="contactInfo">
             <div className="contactIcon"><FaEnvelope /></div>

@@ -11,7 +11,7 @@ import automobile from "../images/automobile.jpg"
 import building from "../images/building.jpg"
 import food from "../images/food.jpg"
 import marine from "../images/marine.jpg"
-import hospitality from "../images/marine.jpg"
+import hospitality from "../images/hospitality.jpg"
 import flight1 from "../images/flight1.jpg"
 import roadtransport from "../images/roadtransport.jpg"
 import ship from "../images/ship.jpg"
@@ -167,7 +167,7 @@ export default function Home() {
       <div className="aboutUsTextContainer" data-aos="slide-up">
         <div className="aboutUsText"><FaPlaneDeparture color="#e10800" /> About &nbsp;<span> Us</span></div>
         <div className="aboutUsHead">Bridging Borders, Empowering Business</div>
-        <div className="aboutUsDescription">We are a leading import and export company with operations spanning India, Seychelles, and Maldives. Established in February 2018 in Ajman, UAE, we provide comprehensive trade services connecting businesses in these countries. Our expertise lies in efficient logistics management, secure warehousing, and seamless transportation. With a commitment to customer satisfaction, we ensure timely and reliable delivery of goods across borders. Leveraging our extensive network and industry knowledge, we offer tailored solutions for diverse industries. Whether it's sourcing products from India or exporting goods to Seychelles and Maldives, our company is your trusted partner for successful international trade.</div>
+        <div className="aboutUsDescription">We are a leading import and export company with operations spanning India, Seychelles, and Maldives. Established in February 2018 in Ajman, UAE, we provide comprehensive trade services connecting businesses in these countries. Our expertise lies in efficient logistics management, secure warehousing, and seamless transportation. With a commitment to customer satisfaction, we ensure timely and reliable delivery of goods across borders. Leveraging our extensive network and industry knowledge, we offer tailored solutions for diverse industries. Our company is your trusted partner for successful international trade.</div>
 
         <div className="features">
           <div className="col1">
@@ -189,7 +189,7 @@ export default function Home() {
         <FaBoxes color="#e10800" /> Our &nbsp;<span>Products</span>
       </div>
       <div className="sectionMainHead">Complete Import and Export Solutions</div>
-      <div className="productDescription">Experience a world of possibilities with our import and exporting company. We offer a diverse range of products to meet your needs. From top-notch automobile spare parts and reliable building materials to delicious food stuff and fresh marine products, we have it all. Enhance your hospitality offerings with our exceptional items, ideal for hotels and resorts. Our comprehensive solutions ensure smooth logistics management, cost-effectiveness, and compliance with international trade regulations. With our expertise and dedication to customer satisfaction, we empower your business to thrive in the global market. Partner with us for efficient and reliable import and export services that open doors to success.
+      <div className="productDescription">Experience a world of possibilities with our import and exporting company. We offer a diverse range of products to meet your needs. From top-notch automobile spare parts and reliable building materials to delicious food stuff and marine products, we have it all. Enhance your hospitality offerings with our exceptional items, ideal for hotels and resorts. Our comprehensive solutions ensure smooth logistics management, cost-effectiveness, and compliance with international trade regulations. With our expertise and dedication to customer satisfaction, we empower your business to thrive in the global market. Partner with us for efficient and reliable import and export services that open doors to success.
       </div>
       <div className="productList">
         {products.map((product: SingleProductType, index) => {
@@ -266,39 +266,41 @@ export default function Home() {
         // return <SingleService image, service, icon, description />
       })}
     </section>
-    <section className="contactUs" id="contact">
+    <section className="contactUs" id="contact"  data-aos="fade-up">
       <div className="contactUsLeft">
         <div className="map">
 
         </div>
-        <div className="sectionHead">
+        <div className="sectionHead" data-aos="fade-up">
           <FaHandshake color="#e10800" /> Contact&nbsp;<span>Us</span>
         </div>
-        <div className="sectionMainHead gap">Get In Touch</div>
+        <div className="sectionMainHead gap" data-aos="slide-up">Get In Touch</div>
 
-        <div className="address">
+        <div className="address" data-aos="fade-up">
           <div className="conatctUsSubHead">Address</div>
-          <div className="contactUsValues">
-            <div>{process.env.REACT_APP_ADDRESS}</div>
+          <div className="contactUsValues" >
+            <pre className="linebreak">{`Insourze Global FZE
+            PO Box: 31795
+            Ajman UAE`}</pre>
 
           </div>
         </div>
-        <hr className="line"></hr>
-        <div className="callUs">
+        <hr className="line"  data-aos="slide-up"></hr>
+        <div className="callUs"  data-aos="fade-up">
           <div className="conatctUsSubHead">Call US</div>
           <div className="contactUsValues">
           <a href={`tel:${process.env.REACT_APP_MOBILE}`}><div>{process.env.REACT_APP_MOBILE}</div></a>
           </div>
         </div>
-        <hr className="line"></hr>
-        <div className="mail">
+        <hr className="line"  data-aos="slide-up"></hr>
+        <div className="mail"  data-aos="fade-up">
           <div className="conatctUsSubHead">Email</div>
           <div className="contactUsValues">
             <div>{process.env.REACT_APP_EMAIL}</div>
           </div>
         </div>
-        <hr className="line"></hr>
-        <div className="followUs">
+        <hr className="line"  data-aos="slide-up"></hr>
+        <div className="followUs"  data-aos="slide-up">
           <div className="conatctUsSubHead followUsHead">FOLLOW US</div>
           <div className="contactUsValues">
             <div><SocialMediaMenu /></div>
