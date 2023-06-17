@@ -282,7 +282,9 @@
 .aboutUsDescription,
 .productDescription {
     color: var(--gray);
+    position: relative;
 }
+
 
 .features {
     display: flex;
@@ -353,9 +355,9 @@
 }
 
 .viewMoreBtn {
-    width: 27%;
+    width: 35%;
     cursor: pointer;
-    padding: 1% 5%;
+    padding: 1.5% 5%;
     background-color: var(--red);
     display: flex;
     font-weight: 200;
@@ -533,7 +535,7 @@
 .conatctUsSubHead {
     color: var(--red);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 0.9em;
 }
 
@@ -573,6 +575,6 @@
     color: var(--red);
     background-color: white;
     border-radius: 50%;
-    font-size: 2.5em;
-
+    font-size: 2em;
+    font-weight: 200;
 }

@@ -10,7 +10,7 @@
     }
 
     .bannerGoals {
-        left: 10%;
+        left: 4%;
         right: 0;
         width: auto;
     }
@@ -274,6 +274,11 @@
         width: 100% !important;
         padding: 18% 5% !important;
     }
+.justyfyText{
+    /* text-align: justify !important; */
+    /* text-align:justify; */
+/* word-spacing:-1px; */
+}
     /* .productName {
         width: 40%;
     } */

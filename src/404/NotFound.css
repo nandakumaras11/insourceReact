@@ -1,0 +1,45 @@
+.notFoundContainer {
+    position: fixed;
+    /* height: 100vh; */
+    background-color: black;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 3;
+}
+
+.errorCode {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.errorLogo{
+    width: 50%;
+}
+.errorDescription{
+    font-weight: 200;
+    font-size: 1.2em;
+}
+.gotoHome{
+width: 10%;
+margin-top: 2%;
+}
+.gotoHomeBtn{
+    display: flex;
+    place-items: center;
+    gap: 10px;
+    background-color: var(--red);
+    padding: 1% 5%;
+    justify-content: center;
+    font-weight: 200;
+}

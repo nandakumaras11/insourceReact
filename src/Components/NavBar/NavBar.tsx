@@ -17,7 +17,7 @@ export const NavBar = () => {
             <nav className="desktopNav">
                 <Link to="/">
                     <div className="logo">
-                        <img src={logo} style={{ objectFit: "cover" }} alt="logo" />
+                        <img loading="lazy" src={logo} style={{ objectFit: "cover" }} alt="logo" />
                     </div>
                 </Link>
                 <div className="mobileMenuToggle" onClick={toggleMenu}><FaBars className="barIcon" /></div>
@@ -27,7 +27,7 @@ export const NavBar = () => {
                             <FaRegClock />
                         </div>
                         <div className="text">
-                            <div className="textLine">Mon-Sat 9AM to 6PM</div>
+                            <div className="textLine">Mon-Sat 9AM to 5PM</div>
                             <div className="textLine">Sunday Closed</div>
                         </div>
                     </div>

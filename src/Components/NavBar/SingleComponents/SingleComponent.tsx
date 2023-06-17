@@ -3,6 +3,7 @@ import { FaArrowCircleUp, FaFacebookSquare, FaInstagram, FaPlaneDeparture, FaWha
 import { Link, useNavigate } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import logo from "../../../images/logow.png"
+import { HashLink, NavHashLink } from "react-router-hash-link"
 
 export type SingleProductType = {
     productName: string
@@ -23,7 +24,7 @@ export const SingleProduct = ({ productName, bg, link }: SingleProductType) => {
             <div className="productName" >
                 {productName}
             </div>
-            <div onClick={() => navigate('/Product', { state: { productName } })} className="viewMoreBtn">View More</div>
+            <div onClick={() => navigate(`/Product/${productName.replaceAll(" ", "_")}`, { state: { productName } })} className="viewMoreBtn">View More</div>
         </div>
     )
 }
@@ -35,7 +36,7 @@ export const SingleService = ({ image, service, icon, description }: SingleServi
             <div className="serviceInfo">
                 <div className="serviceIcon">{icon}</div>
                 <div className="serviceName tu">{service}</div>
-                <div className="serviceDescription">{description}</div>
+                <div className="serviceDescription ">{description}</div>
             </div>
         </div>
     )
@@ -79,15 +80,17 @@ export const scrollWithOffset = (el: any) => {
 export const Loader = () => {
     return (
         <div className="loader">
-            <img width="170px" src={logo} />
+            <img loading="lazy" width="170px" src={logo} />
         </div>
     )
 }
 
 export const ScrollToTopBtn = () => {
     return (
-        <a className="scrollToTop" href="#top" onClick={() => { window.scrollTo({top: 0, left: 0, behavior: 'smooth' });}}>
+        <HashLink
+        smooth={true}
+         className="scrollToTop nav pulse" to="#top" onClick={() => { window.scrollTo({top: 0, left: 0, behavior: 'smooth' });}}>
             <FaArrowCircleUp />
-        </a>
+        </HashLink>
     )
 }

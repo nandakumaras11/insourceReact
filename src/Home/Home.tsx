@@ -77,7 +77,7 @@ export default function Home() {
   const services = [
     {
       'image': flight1,
-      'service': "Flight",
+      'service': "Air Freight",
       'icon': <FaPlaneDeparture />,
       'description': "Swift and efficient shipment via air transportation, ensuring quick delivery of goods to destinations worldwide with speed and reliability."
     },
@@ -89,7 +89,7 @@ export default function Home() {
     },
     {
       image: ship,
-      service: "Shipping",
+      service: "Sea Freight",
       icon: <FaShip />,
       description: "Cost-effective and reliable shipment via sea transport, providing efficient delivery of goods to global destinations with a focus on affordability and bulk cargo handling."
     },
@@ -139,19 +139,19 @@ export default function Home() {
           <div className="countries" data-aos="slide-up">
             <div className="country">
               <div className="flag">
-                <img src={flag} alt="india" width="40" height="40" />
+                <img loading="lazy" src={flag} alt="india" width="40" height="40" />
               </div>
               <div className="countryName">India</div>
             </div>
             <div className="country">
               <div className="flag">
-                <img src={seychelles} alt="india" width="40" height="40" />
+                <img loading="lazy" src={seychelles} alt="india" width="40" height="40" />
               </div>
               <div className="countryName">Seychells</div>
             </div>
             <div className="country">
               <div className="flag">
-                <img src={maldives} alt="india" width="40" height="40" />
+                <img loading="lazy" src={maldives} alt="india" width="40" height="40" />
               </div>
               <div className="countryName">Maldives</div>
             </div>
@@ -167,7 +167,7 @@ export default function Home() {
       <div className="aboutUsTextContainer" data-aos="slide-up">
         <div className="aboutUsText"><FaPlaneDeparture color="#e10800" /> About &nbsp;<span> Us</span></div>
         <div className="aboutUsHead">Bridging Borders, Empowering Business</div>
-        <div className="aboutUsDescription">We are a leading import and export company with operations spanning India, Seychelles, and Maldives. Established in February 2018 in Ajman, UAE, we provide comprehensive trade services connecting businesses in these countries. Our expertise lies in efficient logistics management, secure warehousing, and seamless transportation. With a commitment to customer satisfaction, we ensure timely and reliable delivery of goods across borders. Leveraging our extensive network and industry knowledge, we offer tailored solutions for diverse industries. Our company is your trusted partner for successful international trade.</div>
+        <div className="aboutUsDescription justyfyText">We are a leading import and export company with operations spanning India, Seychelles, and Maldives. Established in February 2018 in Ajman, UAE, we provide comprehensive trade services connecting businesses in these countries. Our expertise lies in efficient logistics management, secure warehousing, and seamless transportation. With a commitment to customer satisfaction, we ensure timely and reliable delivery of goods across borders. Leveraging our extensive network and industry knowledge, we offer tailored solutions for diverse industries. Our company is your trusted partner for successful international trade.</div>
 
         <div className="features">
           <div className="col1">
@@ -189,7 +189,7 @@ export default function Home() {
         <FaBoxes color="#e10800" /> Our &nbsp;<span>Products</span>
       </div>
       <div className="sectionMainHead">Complete Import and Export Solutions</div>
-      <div className="productDescription">Experience a world of possibilities with our import and exporting company. We offer a diverse range of products to meet your needs. From top-notch automobile spare parts and reliable building materials to delicious food stuff and marine products, we have it all. Enhance your hospitality offerings with our exceptional items, ideal for hotels and resorts. Our comprehensive solutions ensure smooth logistics management, cost-effectiveness, and compliance with international trade regulations. With our expertise and dedication to customer satisfaction, we empower your business to thrive in the global market. Partner with us for efficient and reliable import and export services that open doors to success.
+      <div className="productDescription justyfyText">Experience a world of possibilities with our import and exporting company. We offer a diverse range of products to meet your needs. From top-notch automobile spare parts and reliable building materials to delicious food stuff and marine products, we have it all. Enhance your hospitality offerings with our exceptional items, ideal for hotels and resorts. Our comprehensive solutions ensure smooth logistics management, cost-effectiveness, and compliance with international trade regulations. With our expertise and dedication to customer satisfaction, we empower your business to thrive in the global market. Partner with us for efficient and reliable import and export services that open doors to success.
       </div>
       <div className="productList">
         {products.map((product: SingleProductType, index) => {
@@ -199,7 +199,7 @@ export default function Home() {
     </section>
     <section className="contactUsBanner" >
       <div className="sectionMainHead" data-aos="fade-up">Our Goals</div>
-      <div className="contactUsDetails" data-aos="fade-up">We strive to optimize supply chain operations, ensuring efficient transportation, streamlined processes, and timely delivery of goods. Our focus is on customer satisfaction, building strong partnerships, and exceeding expectations. We aim to establish a reliable and robust global network, expanding our reach to connect businesses with markets worldwide. Embracing sustainability, innovation, and continuous improvement, we seek to minimize environmental impact, leverage technology, and enhance operational efficiency. Our ultimate goal is to be a trusted logistics partner, enabling success for our clients and driving growth in the global marketplace.</div>
+      <div className="contactUsDetails justyfyText" data-aos="fade-up">We strive to optimize supply chain operations, ensuring efficient transportation, streamlined processes, and timely delivery of goods. Our focus is on customer satisfaction, building strong partnerships, and exceeding expectations. We aim to establish a reliable and robust global network, expanding our reach to connect businesses with markets worldwide. Embracing sustainability, innovation, and continuous improvement, we seek to minimize environmental impact, leverage technology, and enhance operational efficiency. Our ultimate goal is to be a trusted logistics partner, enabling success for our clients and driving growth in the global marketplace.</div>
       <a href="#contact" className="contactUsBtn">  <div >Contact Us</div></a>
     </section>
 
@@ -212,7 +212,7 @@ export default function Home() {
           <div className="sectionMainHead">We provide the best logistics service for you.
           </div>
           <div className="subHead"  data-aos="fade-up" ><FaShippingFast className="subHeadIcon" />Logistics </div>
-          <div className="importExportServices"  data-aos="slide-up" >Whether you're looking to expand your product range through imports or reach new markets through exports, we have you covered. Our dedicated team handles all aspects, from sourcing high-quality products to managing customs procedures and logistics. With a strong network and deep industry knowledge, we navigate complexities, negotiate competitive rates, and ensure compliance with regulations. Trust us to be your reliable partner in international trade, delivering exceptional import and export services tailored to your specific needs.
+          <div className="importExportServices justyfyText"  data-aos="slide-up" >Whether you're looking to expand your product range through imports or reach new markets through exports, we have you covered. Our dedicated team handles all aspects, from sourcing high-quality products to managing customs procedures and logistics. With a strong network and deep industry knowledge, we navigate complexities, negotiate competitive rates, and ensure compliance with regulations. Trust us to be your reliable partner in international trade, delivering exceptional import and export services tailored to your specific needs.
             <div className="features">
               <div className="col1">
                 <div className="feature"><FaRegCheckCircle className="red" />Efficient Supply Chain Management</div>
@@ -231,7 +231,7 @@ export default function Home() {
               </div>
             </div>
             <section className="procurementSection"  data-aos="slide-up" >
-              <div className="subHead"><FaStoreAlt className="subHeadIcon" />procurement </div>
+              <div className="subHead justyfyText"><FaStoreAlt className="subHeadIcon" />procurement </div>
               Our procurement services offer strategic sourcing, cost reduction, supplier management, and risk mitigation. We streamline your procurement process, secure favorable contracts, and provide transparent reporting. With expertise in market intelligence and continuous improvement, we deliver value and optimize your procurement operations.
               <div className="features">
                 <div className="col1">

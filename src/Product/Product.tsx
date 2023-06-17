@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import bgauomobile from "../images/bgauomobile.jpg"
 import bgHospitality from "../images/bghospitality.jpg"
 import bgBuildingMeterials from "../images/bgbuilding.jpg"
 import bgMarineProducts from "../images/bgmarine.jpg"
 import bgFoodProducts from "../images/bgfood.jpg"
-import { FaFish, FaGlassMartiniAlt, FaHamburger, FaRegBuilding, FaWrench } from "react-icons/fa";
+import { FaAnchor, FaArrowLeft, FaBackward, FaFish, FaGlassMartiniAlt, FaHamburger, FaPeopleCarry, FaRegBuilding, FaWrench } from "react-icons/fa";
 import "./Product.css";
 import { menuInfo } from "../Home/Home";
 import { SingleMenuItem } from "../Components/NavBar/NavBar";
@@ -16,6 +16,7 @@ let ProductDB = [
         productName: "AUTOMOBILE SPARE PARTS",
         description: "Welcome to our premier platform for automobile spare parts import and export. We specialize in connecting suppliers and customers worldwide, providing top-quality automotive components for a seamless driving experience. With a wide range of spare parts available, we ensure quick and efficient sourcing, competitive pricing, and reliable delivery. Whether you're a distributor, retailer, or repair shop, we cater to your specific needs, offering a comprehensive selection of genuine parts for various vehicle makes and models. Trust us to be your trusted partner in the global automotive spare parts industry.",
         icon: <FaWrench className="productIcon" />,
+        brands: ["kia", "hyundai", "toyota", "nissan", "mitsubishi"],
         products: ["Engine components", "Electrical parts", "Filters", "Fuel system parts", "Brake system components", "Cooling system parts", "Body and interior parts"]
     },
     {
@@ -51,18 +52,19 @@ let ProductDB = [
             "Snacks and confectionery",
             "Frozen foods",
             "Dairy products",
-            "Disposable items"
+            "Disposable items",
+            "Juices"
         ]
     },
     {
         bg: bgMarineProducts,
         productName: "MARINE PRODUCTS",
         description: "Your premier source for boat parts import and export. We specialize in sourcing and delivering a comprehensive range of high-quality boat parts and accessories to meet the diverse needs of boat owners and marine industry professionals. From marine engines and propulsion systems to navigation equipment, electrical components, and safety gear, we offer a wide selection of reliable products. Our commitment to excellence ensures that our customers receive top-quality parts from trusted manufacturers, backed by exceptional service and competitive pricing. Whether you're in need of maintenance supplies or seeking to upgrade your boat, explore our extensive inventory and experience reliable performance on the water.",
-        icon: <FaFish className="productIcon" />,
+        icon: <FaAnchor className="productIcon" />,
         products: [
-            "Boat",
+            // "Boat",
             "Boat covers and upholstery",
-            "Marine engines and propulsion systems",
+            "Marine engines and spares",
             "Boat hardware and accessories",
             "Steering and control systems",
             "Marine paints and coatings"
@@ -87,11 +89,19 @@ let ProductDB = [
     }
 ]
 const Product = () => {
-    const { state } = useLocation();
+    let { productName } = useParams();
+    productName = productName?.toUpperCase().replaceAll("_", " ");
+    const navigat = useNavigate();
     const selectedProduct = ProductDB.filter((product) => {
-        return product.productName == state.productName.toUpperCase();
+        return product.productName == productName;
     })
-    const { productName, description, icon, products, bg } = selectedProduct[0];
+
+    useEffect(() => {
+        if (selectedProduct.length == 0)
+            navigat("/notfound");
+    })
+
+    const { description = "", icon = "", products = [], bg = "", brands = [] } = selectedProduct[0] || {};
     return (
         <>
             <div className="productMenu menuContainer" id="top">
@@ -102,16 +112,27 @@ const Product = () => {
                 </div>
                 <SocialMediaMenu />
             </div>
-            <div className="productBanner" style={{ backgroundImage: `url(${(bg)}` }}>{productName}</div>
+            <div className="productBanner" style={{ backgroundImage: `url(${(bg)}` }} >{productName}</div>
             {/* <div className="productBanner" style={{ backgroundImage: `url(${(bg)}` }}>{productName}</div> */}
 
             <div className="productContainerIndividual" >
-                <div className="productDescription">{description}</div>
+            <div className="backBtn pulse" onClick={() => navigat(-1)}><FaArrowLeft /></div>
+
+            {brands && <div className="brandsContainer">
+                    {brands.map((brand) => {
+                        return <div className="brand"  data-aos="flip-up"  style={{ backgroundImage: `url(/${brand}.png)` }}></div>
+                    })}
+                </div>
+                }
+                <div className="productDescription justyfyText">{description}
+
+                </div>
+             
                 <div className="productIconContainer">{icon}
                     <div className="sectionHead"><span>Products</span></div></div>
                 <div className="subProducts">
                     {products.map((product, index) => {
-                        return <div data-aos="zoom-out" style={{ backgroundImage: `url("./${(product)}.jpg")` }} key={index} className="singleProductContainer">{product}</div>
+                        return <div data-aos="zoom-out" style={{ backgroundImage: `url("/${(product.toLowerCase().replaceAll(" ", "_"))}.jpg")` }} key={index} className="singleProductContainer">{product}</div>
                     })}
                 </div>
             </div>

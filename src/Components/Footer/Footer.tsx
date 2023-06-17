@@ -13,12 +13,12 @@ export const Footer = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <section className="copyRightFooterContainer"  data-aos="fade-up">
+    <section className="copyRightFooterContainer">
       <div className="footerContainer">
         <div className="col">
           <div className="footerCompanyName">  <Link to="/">
                     <div className="logo">
-                        <img src={logo} style={{ objectFit: "cover" }} alt="logo" />
+                        <img loading="lazy" src={logo} style={{ objectFit: "cover" }} alt="logo" />
                     </div>
                 </Link></div>
           <div className="footerCompanyDescription">Your trusted source for seamless trading and sourcing solutions. Unlock new business opportunities with our expertise.
@@ -51,7 +51,7 @@ export const Footer = () => {
         <div className="col">
           <div className="redHeadFooter">Working Hours</div>
           <div className="footerLine"></div>
-          <div className="footerItem">9AM- 6PM. Monday-Sunday</div>
+          <div className="footerItem">9AM- 5PM. Monday-Sunday</div>
 
           <a href={`tel:${process.env.REACT_APP_MOBILE}`}><div className="callBtnFooter"><FaPhoneAlt /> <span>{process.env.REACT_APP_MOBILE}</span></div></a>
           <div className="footerItem"><SocialMediaMenu /></div>
